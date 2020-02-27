@@ -22,7 +22,7 @@ function calculateBalance(revenue, outlay) {
     const sumUserOutlay = sumNumbers(outlay);
 
     return sumUserRevenue - sumUserOutlay;
-}
+} 
 
 function sumNumbers(arrayValues) {
     let sumNumber = 0;
