@@ -91,13 +91,18 @@ header {
     background: #1f1f1f;
     border-radius: 30px;
     padding: 25px 10px;
-    opacity: 0.8;
-    transition: 200ms;
+    opacity: 0.7;
+    -moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
 
 }
 .Course:hover {
     opacity: 1;
     cursor: pointer;
+    -moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .Course p {
@@ -151,18 +156,22 @@ header {
     position: absolute;
     top: 5px;
     right: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 .modal .close-modal:hover {
-    cursor: pointer;
+    color: red;
 }
 
 .modal .maximize-modal {
     position: absolute;
     top: 8px;
     right: 35px;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 .modal .maximize-modal:hover {
-    cursor: pointer;
+    color: var(--color-green);
 }
 
 
