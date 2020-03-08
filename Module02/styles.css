@@ -90,6 +90,15 @@ header {
 
 .card {
     background-color: var(--color-rocket);
+    -moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.card:hover {
+    cursor: pointer;
+    -moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .card__image-container img {
@@ -125,7 +134,7 @@ header {
     visibility: hidden;
 }
 .modal {
-    background-color: white;
+    background-color: black;
     width: 90%;
     height: 90%;
     margin: 5vh auto;
@@ -133,11 +142,15 @@ header {
 }
 
 .modal .close-modal {
-    color: black;
+    color: white;
     position: absolute;
     right: 8px;
     top: 8px;
     cursor: pointer;
+    transition: all 0.2s;
+}
+.modal .close-modal:hover {
+    color: red;
 }
 
 /*=== MODAL.ACTIVE ===*/
