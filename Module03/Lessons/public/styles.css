@@ -92,7 +92,8 @@ header {
     background-color: var(--color-rocket);
     -moz-transition: all 0.3s;
 	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
+    transition: all 0.3s;
+    display: grid;
 }
 .card:hover {
     cursor: pointer;
@@ -107,12 +108,13 @@ header {
 
 .card__content,
 .card__info {
-    padding: 24px;
+    padding: 24px;    
 }
 
 .card__info {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
 .card__price {
