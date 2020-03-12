@@ -9,11 +9,24 @@ server.use(express.static('public'))
 server.set("view engine", "njk");
 
 nunjucks.configure("views", {
-    express: server
+    express: server,
+    autoescape: false
 })
 
 server.get("/", function(req, res) {
-    return res.render("about");
+    const about = {
+        avatar_url: "https://avatars3.githubusercontent.com/u/40874927?s=460&v=4",
+        name: "André Euzébio",
+        role: "Desenvolvedor de Sistemas",
+        description: 'Formado em Sistemas de Informações. Colaborador da <a href="https://senior.com.br" target="_blank">Senior Sistemas</a>',
+        links: [
+            { name: "Github" , url: "https://github.com/andre-euz"},
+            { name: "Instagram" , url: "https://www.instagram.com/andre_rdg/?hl=pt-br"},
+            { name: "Linkedin" , url: "https://www.linkedin.com/in/andreeuzebio/"}
+        ]
+
+    }
+    return res.render("about", {about});
 })
 
 server.get("/portfolio", function(req, res) {
