@@ -2,50 +2,22 @@
 
 {% block content %}
         <section class="Courses">
-            <div class="Course">
-                <div class="Course__logo">
-                    <img src="https://skylab.rocketseat.com.br/static/64c237ccff807c054339a62d53b4b402.svg" alt="Course Logo">
-                </div>
-                <div class="Course__title">
-                    <p><span id="starter">Cursos 100% online e gratuitos</span> para você entrar com o pé direito nas tecnologias mais desejadas do mercado.</p>
-                </div>
-                <div class="Course__modules">
-                    <p>7 módulos</p>
-                </div>
-                <div class="Course__price">
-                    <p>Gratuito</p>
-                </div>
-                
-            </div>
-            <div class="Course">
-                <div class="Course__logo">
-                    <img src="https://skylab.rocketseat.com.br/static/0828532024cb46921a6b5e941f8d788d.svg" alt="Course Logo">
-                </div>
-                <div class="Course__title">
-                    <p><span id="launchbase">Domine programação do zero</span> e tenha acesso às melhores oportunidades do mercado no menor tempo possível.</p>
-                </div>
-                <div class="Course__modules">
-                    <p>17 módulos</p>
-                </div>
-                <div class="Course__price">
-                    <p>Pago</p>
-                </div>
-                
-            </div>
-            <div class="Course">
-                <div class="Course__logo">
-                    <img src="https://skylab.rocketseat.com.br/static/83a178a0653dab1d55e2ed7946465975.svg" alt="Course Logo">
-                </div>
-                <div class="Course__title">
-                    <p>Treinamento imersivo nas tecnologias mais modernas de desenvolvimento web e mobile para <span id="gostack">quem não tem tempo a perder</span>.</p>
-                </div>
-                <div class="Course__modules">
-                    <p>25 modulos</p>
-                </div>
-                <div class="Course__price">
-                    <p>Pago</p>
-                </div>                
-            </div>
+            {% for course in courses %}
+                <div class="Course">
+                    <div class="Course__logo">
+                        <img src="{{ course.logo_url }}" alt="{{ course.name }} Course Logo">
+                    </div>
+                    <div class="Course__title">
+                        <p>{{ course.title }}</p>
+                    </div>
+                    <div class="Course__modules">
+                        <p>{{ course.modules }}</p>
+                    </div>
+                    <div class="Course__price">
+                        <p>{{ course.price }}</p>
+                    </div>               
+                </div>  
+            {% endfor %}          
         </section>
         <div class="modal-overlay">
             <div class="modal">
