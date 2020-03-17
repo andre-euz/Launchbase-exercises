@@ -133,71 +133,26 @@ header {
     color: var(--color-green)
 }
 
-/*=== MODAL ===*/
-.modal-overlay{
-    background-color: rgba(0, 0, 0, 0.7);
+/*iframe {
+    position: absolute;
     width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    opacity: 0;
-    visibility: hidden;
-}   
-
-.modal {
-    background-color: white;
-    width: 90%;
-    height: 90%;
-    margin: 5vh auto;
-    position: relative;        
-}
-
-.modal .close-modal {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-.modal .close-modal:hover {
-    color: red;
-}
-
-.modal .maximize-modal {
-    position: absolute;
-    top: 8px;
-    right: 35px;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-.modal .maximize-modal:hover {
-    color: var(--color-green);
-}
-
-
-/*=== MODAL.ACTIVE AND MAXIMIZE ===*/
-.modal-overlay.active {
-    visibility: visible;
-    opacity: 1;
-}
-
-iframe {
-    position: absolute;
-    width: 99.9%;
     height: 95%;
     top: 5%;
-}
+}*/
 
-.modal.maximize {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;    
-}
 
 .NotFound {
     font-size: large;
     color: white;
     text-align: center;
     margin: 25% auto;
+}
+
+.Page-courses {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.Page-course {
+    max-width: 800px;
+    margin: 0 auto;
 }
