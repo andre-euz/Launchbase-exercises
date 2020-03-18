@@ -52,6 +52,7 @@ server.get("/courses/:id", function(req, res) {
     return res.render("courses",{ course });
   });
 
+
 server.listen(5000, function() {
     console.log("Server is running!");
 })
