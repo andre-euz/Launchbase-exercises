@@ -48,7 +48,7 @@ server.get("/courses/:id", function(req, res) {
     if (!course) {
         return res.status(404).render("not-found");
     }
-
+    
     return res.render("courses",{ course });
   });
 

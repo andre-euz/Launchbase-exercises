@@ -133,12 +133,11 @@ header {
     color: var(--color-green)
 }
 
-/*iframe {
-    position: absolute;
+iframe {
+    position: fixed;    
     width: 100%;
-    height: 95%;
-    top: 5%;
-}*/
+    height: 100%;    
+}
 
 
 .NotFound {
@@ -146,13 +145,16 @@ header {
     color: white;
     text-align: center;
     margin: 25% auto;
+    
 }
 
 .Page-courses {
-    max-width: 800px;
-    margin: 0 auto;
+    position: absolute;  
+    width: 100%;
 }
 .Page-course {
-    max-width: 800px;
-    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  
 }
